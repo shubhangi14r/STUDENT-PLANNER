@@ -1,0 +1,68 @@
+export interface User {
+  name: string;
+  email: string;
+}
+
+export interface Note {
+  id: string;
+  title: string;
+  content: string;
+  subject: string;
+  updatedAt: number;
+}
+
+export interface Reminder {
+  id: string;
+  title: string;
+  description?: string;
+  dateTime: number;
+  isCompleted: boolean;
+  notified: boolean;
+}
+
+export interface Todo {
+  id: string;
+  text: string;
+  completed: boolean;
+  createdAt: number;
+}
+
+export interface WeeklyGoal {
+  id: string;
+  text: string;
+  completed: boolean;
+}
+
+export interface Deadline {
+  id: string;
+  title: string;
+  date: number;
+}
+
+export interface AcademicRecord {
+  id: string;
+  subjectId: string;
+  grade: string;
+  targetGrade: string;
+  studyHours: number;
+}
+
+export interface WeeklyReview {
+  id: string;
+  weekStarting: number;
+  wins: string[];
+  misses: string[];
+  studyHours: number;
+  workouts: number;
+  projects: string[];
+  reflections: string;
+}
+
+export interface Subject {
+  id: string;
+  name: string;
+  color: 'pink' | 'blue' | 'white';
+  icon?: 'helicopter' | 'blimp' | 'rocket' | 'none';
+}
+
+export type View = 'library' | 'subject-detail' | 'calendar' | 'todos' | 'weekly-review' | 'academics-tracker';
